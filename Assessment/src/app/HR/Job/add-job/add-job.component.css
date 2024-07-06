@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+.w100 {
+    width: 100%;
+}
+
+.row1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mainrow{
+    background: rgba(162, 161, 168, 0.1);
+    border-radius: 10px;
+    /* width: 70%; */
+    padding-top: 20px;
+    max-width: 90%;
+    margin-left: 50px;
+    
+}
+.row2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mainrow1{
+    margin-top: 10px;
+    background: rgba(162, 161, 168, 0.1);
+    border-radius: 10px;
+    /* width: 70%; */
+    padding-top: 20px;
+    max-width: 90%;
+    margin-left: 50px;
+    
+}
+
+.Remarks{
+text-align: left;
+}
+
+h5 {
+    text-align: center;
+    color: var(--Dark-500, #16151C);
+    font-family: Lexend;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.text-center{
+    margin-top: 20px;
+}
+
+.btCol {
+    background: #7152F3;
+    color: white;
+    font-size: 15px;
+}
+
+.btWh {
+    border: 1px solid gray;
+}

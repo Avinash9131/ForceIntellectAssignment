@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+* {
+  font-family: "Lexend";
+}
+
+.rwllogo img{
+  width: 80%;
+  margin-top: 8%;
+}
+
+.maincomponent {
+  overflow: hidden;
+}
+
+.sidenav {
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(162, 161, 168, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap:  10px ;
+}
+
+.common {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  padding: 5% 2%;
+}
+
+.common a {
+  color: #16151c;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.common:hover {
+  border-left: solid #7152f3 3px;
+  color: #7152f3;
+  border-radius: 0px 10px 10px 0px;
+  background: rgba(113, 82, 243, 0.05);
+  cursor: pointer;
+  
+}
+
+.common a:hover {
+  color: #7152f3;
+  font-weight:500;  
+
+}
+
+@media screen and (max-width: 1025px) {
+  .common a {
+    font-size: 10px;
+  }
+}

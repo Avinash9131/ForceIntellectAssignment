@@ -1,0 +1,26 @@
+<div class="container-fluid maincomponent">
+    <div class="row">
+        <div class="col-2 sidenav">
+            <div class="rwllogo">
+                <img [src]="forcelogo" alt="">
+            </div>
+
+            <div class="jobs common" routerLink="/hr/jobs/add-new-job">
+                <a><img [src]="PurchaseRequest" alt=""> Purchase Request</a>
+            </div>
+
+            <div class="projects common" routerLink="/hr/projects/add-projects">
+                <a> <img [src]="ItemDetalis" alt=""> Item Details</a>
+            </div>
+
+
+            <div class="setting common" routerLink="/hr/logout">
+                <a><img [src]="logout" alt=""> Log Out</a>
+            </div>
+
+        </div>
+        <div class="col-10">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

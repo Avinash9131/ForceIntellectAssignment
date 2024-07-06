@@ -1,0 +1,102 @@
+<div class="container my-4">
+    <form (ngSubmit)="saveJob()">
+      <h5>Purchase Request Form</h5>
+      <div class="row">
+        <div class="mainrow">
+          <div class="row1">
+            <div class="col-md-4 px-1">
+              <mat-form-field appearance="outline" class="w100">
+                <mat-label>Enter Document Number</mat-label>
+                <input matInput name="documentNumber" [(ngModel)]="addJob.documentNumber">
+              </mat-form-field>
+            </div>
+            <div class="col-md-4 px-1">
+              <mat-form-field appearance="outline" class="w100">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker" [(ngModel)]="addJob.date" name="date">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>                    
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row1">
+            <div class="col-md-4 px-1">
+              <mat-form-field appearance="outline" class="w100">
+                <mat-label>Enter Company Name</mat-label>
+                <mat-select name="companyName" [(ngModel)]="addJob.companyName">
+                  <mat-option *ngFor="let name of companyname" [value]="name">{{name}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4 px-1">
+              <mat-form-field appearance="outline" class="w100">
+                <mat-label>Indent Type</mat-label>
+                <mat-select name="indentType" [(ngModel)]="addJob.indentType">
+                  <mat-option *ngFor="let type of IndentType" [value]="type">{{type}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="my-2 px-1">
+            <mat-radio-group [(ngModel)]="addJob.reserved" name="reserved">
+              <mat-radio-button value="true">IsReserved</mat-radio-button>
+              <mat-radio-button value="false">Not Reserved</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+  
+        <div class="mainrow1">
+          <div class="row2">
+            <div class="col-md-4 px-1">
+              <mat-form-field appearance="outline" class="w100">
+                <mat-label>Select Department</mat-label>
+                <mat-select name="department" [(ngModel)]="addJob.department">
+                  <mat-option *ngFor="let dept of department" [value]="dept">{{dept}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4 px-1">
+              <mat-form-field appearance="outline" class="w100">
+                <mat-label>Charge Type</mat-label>
+                <mat-select name="chargeType" [(ngModel)]="addJob.chargeType">
+                  <mat-option *ngFor="let charge of ChargeType" [value]="charge">{{charge}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="col-md-4 px-1">
+              <mat-form-field appearance="outline" class="w100">
+                <mat-label>Requested By</mat-label>
+                <input type="text" matInput [(ngModel)]="addJob.requestedBy" [matAutocomplete]="autoRequestedBy">
+                <mat-autocomplete #autoRequestedBy="matAutocomplete">
+                  <mat-option *ngFor="let option of requestedByOptions" [value]="option">{{option}}</mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4 px-1">
+              <mat-form-field appearance="outline" class="w100">
+                <mat-label>Indent Tag</mat-label>
+                <input type="text" matInput [(ngModel)]="addJob.indentTag" [matAutocomplete]="autoIndentTag">
+                <mat-autocomplete #autoIndentTag="matAutocomplete">
+                  <mat-option *ngFor="let option of indentTagOptions" [value]="option">{{option}}</mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="my-2 px-1">
+            <h5 class="mb-3 Remarks">Remarks</h5>
+            <mat-form-field appearance="outline" class="w100">
+              <mat-label>Enter Remarks</mat-label>
+              <textarea matInput name="remarks" [(ngModel)]="addJob.remarks"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+  
+      <div class="text-center">
+        <button type="reset" class="btn btWh mx-2">Cancel</button>
+        <button type="submit" class="btn btCol mx-2">Submit</button>
+      </div>
+    </form>
+  </div>
